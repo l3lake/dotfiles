@@ -1,0 +1,28 @@
+" Map leader
+let mapleader = ","
+let g:mapleader = ","
+
+" Disable supertab so I can paste my copy yo!
+call janus#disable_plugin('supertab')
+
+" Corrective action for glyphs (I think) 
+set ambiwidth=single
+
+let g:airline#extensions#tabline#enabled = 1
+  "if !exists('g:airline_symbols')
+    "let g:airline_symbols = {}
+  "endif
+
+  "" unicode symbols
+  "let g:airline_left_sep = 'Ã‚Â»'
+  "let g:airline_left_sep = 'Ã¢â€“Â¶'
+  "let g:airline_right_sep = 'Ã‚Â«'
+  "let g:airline_right_sep = 'Ã¢â€”â‚¬'
+  "let g:airline_symbols.linenr = 'Ã¢ÂÅ '
+  "let g:airline_symbols.linenr = 'Ã¢ÂÂ¤'
+  "let g:airline_symbols.linenr = 'Ã‚Â¶'
+  "let g:airline_symbols.branch = 'Ã¢Å½â€¡'
+  "let g:airline_symbols.paste = 'ÃÂ'
+  "let g:airline_symbols.paste = 'ÃƒÅ¾'
+  "let g:airline_symbols.paste = 'Ã¢Ë†Â¥'
+  "let g:airline_symbols.whitespace = 'ÃŽÅ¾'
