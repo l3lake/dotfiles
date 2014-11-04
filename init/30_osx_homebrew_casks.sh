@@ -39,6 +39,7 @@ casks=(
   atom
   virtualbox
   karabiner
+  capsee
   vimr
   day-o
   bartender
