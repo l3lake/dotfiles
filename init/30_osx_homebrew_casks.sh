@@ -40,6 +40,7 @@ casks=(
   virtualbox
   karabiner
   capsee
+  slate
   vimr
   day-o
   bartender
