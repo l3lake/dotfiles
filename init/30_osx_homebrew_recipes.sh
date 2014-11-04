@@ -7,7 +7,6 @@ is_osx || return 1
 # Homebrew recipes
 recipes=(
   bash
-  cowsay
   git
   git-extras
   htop-osx
@@ -15,12 +14,11 @@ recipes=(
   id3tool
   lesspipe
   man2html
-  mercurial
-  nmap
-  sl
   ssh-copy-id
-  the_silver_searcher
   tree
+  composer
+  wget
+  vim
 )
 
 brew_install_recipes
