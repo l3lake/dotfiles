@@ -19,6 +19,7 @@ recipes=(
   composer
   wget
   vim
+  brew-cask
 )
 
 brew_install_recipes
