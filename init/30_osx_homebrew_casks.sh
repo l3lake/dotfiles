@@ -38,6 +38,7 @@ casks=(
   macdown
   atom
   virtualbox
+  karabiner
   vimr
   day-o
   bartender
