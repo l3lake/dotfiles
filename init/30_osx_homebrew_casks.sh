@@ -28,6 +28,19 @@ casks=(
   chrome-remote-desktop-host
   the-unarchiver
   vlc
+  handbrake
+  carbon-copy-cloner
+  citrix-receiver
+  sequel-pro
+  cyberduck
+  logitech-unifying
+  macdown
+  atom
+  virtualbox
+  vimr
+  day-o
+  bartender
+  vagrant-manager
   # Quick Look plugins
   betterzipql
   qlcolorcode
