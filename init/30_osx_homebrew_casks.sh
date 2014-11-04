@@ -25,6 +25,7 @@ casks=(
   google-chrome
   iterm2
   macvim
+  namechanger
   chrome-remote-desktop-host
   the-unarchiver
   vlc
