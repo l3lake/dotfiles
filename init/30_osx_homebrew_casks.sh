@@ -46,19 +46,20 @@ casks=(
   #vagrant-manager
   
   # Quick Look plugins
-  betterzipql
-  qlcolorcode
-  qlmarkdown
-  qlprettypatch
-  qlstephen
-  quicklook-csv
-  quicklook-json
-  quicknfo
-  suspicious-package
-  webp-quicklook
+  #betterzipql
+  #qlcolorcode
+  #qlmarkdown
+  #qlprettypatch
+  #qlstephen
+  #quicklook-csv
+  #quicklook-json
+  #quicknfo
+  #suspicious-package
+  #webp-quicklook
+  
   # Color pickers
-  colorpicker-developer
-  colorpicker-skalacolor
+  #colorpicker-developer
+  #colorpicker-skalacolor
 )
 
 # Install Homebrew casks.
