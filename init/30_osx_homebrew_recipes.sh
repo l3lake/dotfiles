@@ -16,7 +16,6 @@ recipes=(
   man2html
   ssh-copy-id
   tree
-  composer
   wget
   vim
   brew-cask
