@@ -19,32 +19,32 @@ brew cask info this-is-somewhat-annoying 2>/dev/null
 # Homebrew casks
 casks=(
   # Applications
-  bettertouchtool
+  #bettertouchtool
   chromium
-  firefox
-  google-chrome
+  #firefox
+  #google-chrome
   iterm2
-  macvim
-  namechanger
-  chrome-remote-desktop-host
-  the-unarchiver
-  vlc
-  handbrake
-  carbon-copy-cloner
-  citrix-receiver
-  sequel-pro
-  cyberduck
-  logitech-unifying
-  macdown
+  #macvim
+  #namechanger
+  #chrome-remote-desktop-host
+  #the-unarchiver
+  #vlc
+  #handbrake
+  #citrix-receiver
+  #sequel-pro
+  #cyberduck
+  #logitech-unifying
+  #macdown
   atom
-  virtualbox
-  karabiner
-  capsee
-  slate
-  vimr
-  day-o
-  bartender
-  vagrant-manager
+  #virtualbox
+  #karabiner
+  #capsee
+  #slate
+  #vimr
+  #day-o
+  #bartender
+  #vagrant-manager
+  
   # Quick Look plugins
   betterzipql
   qlcolorcode
