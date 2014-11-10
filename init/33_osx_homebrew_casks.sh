@@ -39,6 +39,8 @@ casks=(
   virtualbox
   karabiner
   transmission
+  little-snitch
+  alfred
   capsee
   slate
   vimr
