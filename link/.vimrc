@@ -1,7 +1,67 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+Plugin 'L9'
+" Git plugin not hosted on GitHub
+Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Avoid a name conflict with L9
+Plugin 'user/L9', {'name': 'newL9'}
+
+" My Plugins
+Plugin 'bling/vim-airline'
+Plugin 'ddollar/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'garbas/vim-snipmate'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'marcweber/vim-addon-mw-utils'
+Plugin 'bronson/vim-trailing-whitespace'
+
+
+call vundle#end()            " required
+
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+" Map leader
+let mapleader = ","
+let g:mapleader = ","
+
+let g:airline#extensions#tabline#enabled = 1
+
 set nocompatible   " Disable vi-compatibility
 set t_Co=256
 
 colorscheme xoria256
+set guifont=menlo\ 16
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
@@ -93,6 +153,9 @@ nmap <silent> ,so :so %<CR>
 " Toggle NERDTree
 map <leader>n :NERDTreeToggle<CR>
 
+" Automatically open Nerdtree
+autocmd vimenter * NERDTree
+
 " Quickly write file as using sudo
 map <leader>ww :!sudo tee > /dev/null %<cr>
 
@@ -159,84 +222,3 @@ nnoremap <leader>g :exe ':silent !open -a /Applications/Google\ Chrome.app %'<CR
 
 "Load the current buffer in Chrome (pc)
 "map <silent> ,pc :!open -a Google\ Chrome %<CR><CR>
-
-"-------------------------------------------------------------------
-"
-" Laravel
-"
-"-------------------------------------------------------------------
-
-abbrev gm !php artisan generate:model
-abbrev gc !php artisan generate:controller
-abbrev gmig !php artisan generate:migration
-
-" Auto-remove trailing spaces
-autocmd BufWritePre *.php :%s/\s\+$//e
-autocmd BufWritePre *.txt :%s/\s\+$//e
-autocmd BufWritePre *.html :%s/\s\+$//e
-
-" Laravel framework commons
-nmap <leader>lr :e app/routes.php<cr>
-nmap <leader>lca :e app/config/app.php<cr>81Gf(%O
-nmap <leader>lcd :e app/config/database.php<cr>
-nmap <leader>lc :e composer.json<cr>
-
-" Concept - load underlying class for Laravel
-"function! FacadeLookup()
-    "let facade = input('Facade Name: ')
-    "let classes = {
-                "\       'Form': 'Html/FormBuilder.php',
-                "\       'Html': 'Html/HtmlBuilder.php',
-                "\       'File': 'Filesystem/Filesystem.php',
-                "\       'Eloquent': 'Database/Eloquent/Model.php'
-                "\   }
-
-    "execute ":edit vendor/laravel/framework/src/Illuminate/" . classes[facade]
-"endfunction
-"nmap ,lf :call FacadeLookup()<cr>
-
-"-------------------------------------------------------------------
-"
-" PHP
-"
-"-------------------------------------------------------------------
-
-" Abbreviations
-"abbrev pft PHPUnit_Framework_TestCase
-
-" Run PHPUnit tests
-"map <Leader>t :!phpunit %<cr>
-
-" Prepare a new PHP class
-"function! Class()
-    "let name = input('Class name? ')
-    "let namespace = input('Any Namespace? ')
-
-    "if strlen(namespace)
-        "exec 'normal i<?php namespace ' . namespace . ';
-    "else
-        "exec 'normal i<?php
-    "endif
-
-    "" Open class
-    "exec 'normal iclass ' . name . ' {^M}^[O^['
-
-    "exec 'normal i^M    public function __construct()^M{^M ^M}^['
-"endfunction
-"nmap ,1  :call Class()<cr>
-
-"" Add a new dependency to a PHP class
-"function! AddDependency()
-    "let dependency = input('Var Name: ')
-    "let namespace = input('Class Path: ')
-
-    "let segments = split(namespace, '\')
-    "let typehint = segments[-1]
-
-    "exec 'normal gg/construct^M:H^Mf)i, ' . typehint . ' $' . dependency . '^[/}^>O$this->^[a' . dependency . ' = $' . dependency . ';^[?{^MkOprotected $' . dependency . ';^M^[?{^MOuse ' . namespace . ';^M^['
-
-    "" Remove opening comma if there is only one dependency
-    "exec 'normal :%s/(, /(/g
-    '
-"endfunction
-"nmap ,2  :call AddDependency()<cr>

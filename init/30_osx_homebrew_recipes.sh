@@ -17,7 +17,7 @@ recipes=(
   ssh-copy-id
   tree
   wget
-  vim
+  # vim
   brew-cask
 )
 

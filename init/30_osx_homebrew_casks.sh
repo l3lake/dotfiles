@@ -18,48 +18,49 @@ brew cask info this-is-somewhat-annoying 2>/dev/null
 
 # Homebrew casks
 casks=(
-  # Applications
-  #bettertouchtool
+  Applications
+  bettertouchtool
   chromium
-  #firefox
-  #google-chrome
+  firefox
+  google-chrome
   iterm2
-  #macvim
-  #namechanger
-  #chrome-remote-desktop-host
-  #the-unarchiver
-  #vlc
-  #handbrake
-  #citrix-receiver
-  #sequel-pro
-  #cyberduck
-  #logitech-unifying
-  #macdown
+  macvim
+  namechanger
+  chrome-remote-desktop-host
+  the-unarchiver
+  vlc
+  handbrake
+  citrix-receiver
+  sequel-pro
+  cyberduck
+  logitech-unifying
+  macdown
   atom
-  #virtualbox
-  #karabiner
-  #capsee
-  #slate
-  #vimr
-  #day-o
-  #bartender
-  #vagrant-manager
-  
+  virtualbox
+  karabiner
+  transmission
+  capsee
+  slate
+  vimr
+  # day-o
+  bartender
+  vagrant-manager
+
   # Quick Look plugins
-  #betterzipql
-  #qlcolorcode
-  #qlmarkdown
-  #qlprettypatch
-  #qlstephen
-  #quicklook-csv
-  #quicklook-json
-  #quicknfo
-  #suspicious-package
-  #webp-quicklook
-  
+  betterzipql
+  qlcolorcode
+  qlmarkdown
+  qlprettypatch
+  qlstephen
+  quicklook-csv
+  quicklook-json
+  quicknfo
+  suspicious-package
+  webp-quicklook
+
   # Color pickers
-  #colorpicker-developer
-  #colorpicker-skalacolor
+  colorpicker-developer
+  colorpicker-skalacolor
 )
 
 # Install Homebrew casks.
