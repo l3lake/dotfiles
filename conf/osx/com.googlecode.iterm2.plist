@@ -796,9 +796,11 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>2070 325 445 415 0 0 2560 1417 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>1476 529 924 485 0 0 2560 1417 </string>
+	<string>1474 529 924 485 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>364 815 664 554 0 0 2560 1417 </string>
+	<string>381 0 1195 1417 0 0 2560 1417 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>398 0 1195 1417 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1017,7 +1019,7 @@
 			<key>Cursor Type</key>
 			<integer>1</integer>
 			<key>Custom Command</key>
-			<string>Yes</string>
+			<string>No</string>
 			<key>Custom Directory</key>
 			<string>No</string>
 			<key>Default Bookmark</key>
@@ -1048,7 +1050,7 @@
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
-			<string></string>
+			<string>cd</string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
