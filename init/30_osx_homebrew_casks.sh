@@ -18,7 +18,7 @@ brew cask info this-is-somewhat-annoying 2>/dev/null
 
 # Homebrew casks
 casks=(
-  Applications
+  # Applications
   bettertouchtool
   chromium
   firefox
@@ -42,6 +42,8 @@ casks=(
   capsee
   slate
   vimr
+  totalfinder
+  startninja
   # day-o
   bartender
   vagrant-manager

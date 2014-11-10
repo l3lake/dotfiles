@@ -7,6 +7,7 @@ is_osx || return 1
 # Homebrew recipes
 recipes=(
   bash
+  bash-completion
   git
   git-extras
   htop-osx
@@ -17,6 +18,7 @@ recipes=(
   ssh-copy-id
   tree
   wget
+  curl
   # vim
   brew-cask
 )
