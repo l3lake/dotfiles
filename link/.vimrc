@@ -1,59 +1,12 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-Plugin 'L9'
-" Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Avoid a name conflict with L9
-Plugin 'user/L9', {'name': 'newL9'}
-
-" My Plugins
-Plugin 'bling/vim-airline'
-Plugin 'ddollar/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'garbas/vim-snipmate'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'marcweber/vim-addon-mw-utils'
-Plugin 'bronson/vim-trailing-whitespace'
-
-
-call vundle#end()            " required
-
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
 " Map leader
 let mapleader = ","
 let g:mapleader = ","
+
+" Local dirs
+set backupdir=$DOTFILES/caches/vim
+set directory=$DOTFILES/caches/vim
+set undodir=$DOTFILES/caches/vim
+let g:netrw_home = expand('$DOTFILES/caches/vim')
 
 let g:airline#extensions#tabline#enabled = 1
 
@@ -151,7 +104,7 @@ nmap <silent> ,so :so %<CR>
 :nmap <C-N><C-N> :set invnumber<CR>
 
 " Toggle NERDTree
-map <leader>n :NERDTreeToggle<CR>
+" map <leader>n :NERDTreeToggle<CR>
 
 " Automatically open Nerdtree
 autocmd vimenter * NERDTree
@@ -222,3 +175,61 @@ nnoremap <leader>g :exe ':silent !open -a /Applications/Google\ Chrome.app %'<CR
 
 "Load the current buffer in Chrome (pc)
 "map <silent> ,pc :!open -a Google\ Chrome %<CR><CR>
+
+
+"-------------------------------------------------------------------
+"
+" Cowboy Additions
+"
+"-------------------------------------------------------------------
+
+" Airline
+let g:airline_powerline_fonts = 1 " TODO: detect this?
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_format = '%s '
+let g:airline#extensions#tabline#buffer_nr_show = 1
+"let g:airline#extensions#tabline#fnamecollapse = 0
+"let g:airline#extensions#tabline#fnamemod = ':t'
+
+" NERDTree
+let NERDTreeShowHidden = 1
+let NERDTreeMouseMode = 2
+let NERDTreeMinimalUI = 1
+" Open automatically if no files were specified on the CLI.
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+map <leader>n :NERDTreeToggle<CR>
+
+" Buffer navigation
+nnoremap <leader>b :CtrlPBuffer<CR> " List other buffers
+map <leader><leader> :b#<CR> " Switch between the last two files
+map gb :bnext<CR> " Next buffer
+map gB :bprev<CR> " Prev buffer
+
+" Indent Guides
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+
+" https://github.com/junegunn/vim-plug
+" Reload .vimrc and :PlugInstall to install plugins.
+call plug#begin('~/.vim/plugged')
+Plug 'bling/vim-airline'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-unimpaired'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'ddollar/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'garbas/vim-snipmate'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'marcweber/vim-addon-mw-utils'
+Plug 'bronson/vim-trailing-whitespace'
+" Plug 'fatih/vim-go'
+" Plug 'tpope/vim-vinegar'
+" Plug 'tpope/vim-repeat'
+" Plug 'tpope/vim-commentary'
+" Plug 'pangloss/vim-javascript'
+" Plug 'mhinz/vim-signify'
+call plug#end()
