@@ -6,7 +6,7 @@ let g:mapleader = ","
 set backupdir=$DOTFILES/caches/vim
 set directory=$DOTFILES/caches/vim
 set undodir=$DOTFILES/caches/vim
-let g:netrw_home = expand('$DOTFILES/caches/vim')
+" let g:netrw_home = expand('$DOTFILES/caches/vim')
 
 let g:airline#extensions#tabline#enabled = 1
 
@@ -176,7 +176,6 @@ nnoremap <leader>g :exe ':silent !open -a /Applications/Google\ Chrome.app %'<CR
 "Load the current buffer in Chrome (pc)
 "map <silent> ,pc :!open -a Google\ Chrome %<CR><CR>
 
-
 "-------------------------------------------------------------------
 "
 " Cowboy Additions
@@ -184,7 +183,7 @@ nnoremap <leader>g :exe ':silent !open -a /Applications/Google\ Chrome.app %'<CR
 "-------------------------------------------------------------------
 
 " Airline
-let g:airline_powerline_fonts = 1 " TODO: detect this?
+" let g:airline_powerline_fonts = 1 " TODO: detect this?
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_format = '%s '
 let g:airline#extensions#tabline#buffer_nr_show = 1
