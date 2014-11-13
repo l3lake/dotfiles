@@ -85,10 +85,10 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 defaults write NSGlobalDomain NSTextShowsControlCharacters -bool true
 
 # Disable Resume system-wide
-defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
+#defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
 
 # Disable automatic termination of inactive apps
-defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
+#defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
 
 # Disable the crash reporter
 #defaults write com.apple.CrashReporter DialogType -string "none"
@@ -110,7 +110,7 @@ sudo systemsetup -setcomputersleep Off > /dev/null
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
 # Disable Notification Center and remove the menu bar icon
-launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
+#launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
 
 # Disable smart quotes as they’re annoying when typing code
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
@@ -129,11 +129,11 @@ sudo tmutil disablelocal
 sudo pmset -a hibernatemode 0
 
 # Remove the sleep image file to save disk space
-sudo rm /Private/var/vm/sleepimage
+#sudo rm /Private/var/vm/sleepimage
 # Create a zero-byte file instead…
-sudo touch /Private/var/vm/sleepimage
+#sudo touch /Private/var/vm/sleepimage
 # …and make sure it can’t be rewritten
-sudo chflags uchg /Private/var/vm/sleepimage
+#sudo chflags uchg /Private/var/vm/sleepimage
 
 # Disable the sudden motion sensor as it’s not useful for SSDs
 sudo pmset -a sms 0
@@ -153,9 +153,6 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 # defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
 # defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
 
-# Disable “natural” (Lion-style) scrolling
-# defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
-
 # Increase sound quality for Bluetooth headphones/headsets
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
@@ -170,7 +167,7 @@ defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
 # Disable press-and-hold for keys in favor of key repeat
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+#defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 0
@@ -370,7 +367,7 @@ defaults write com.apple.dock expose-animation-duration -float 0.1
 defaults write com.apple.dock expose-group-by-app -bool false
 
 # Disable Dashboard
-defaults write com.apple.dashboard mcx-disabled -bool true
+#defaults write com.apple.dashboard mcx-disabled -bool true
 
 # Don’t show Dashboard as a Space
 defaults write com.apple.dock dashboard-in-overlay -bool true
@@ -416,17 +413,17 @@ sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulato
 # 11: Launchpad
 # 12: Notification Center
 # Top left screen corner → Put display to sleep
-defaults write com.apple.dock wvous-tl-corner -int 10
-defaults write com.apple.dock wvous-tl-modifier -int 0
+#defaults write com.apple.dock wvous-tl-corner -int 10
+#defaults write com.apple.dock wvous-tl-modifier -int 0
 # Top right screen corner → Mission Control
-defaults write com.apple.dock wvous-tr-corner -int 2
-defaults write com.apple.dock wvous-tr-modifier -int 0
+#defaults write com.apple.dock wvous-tr-corner -int 2
+#defaults write com.apple.dock wvous-tr-modifier -int 0
 # Bottom left screen corner → Dashboard
-defaults write com.apple.dock wvous-bl-corner -int 7
-defaults write com.apple.dock wvous-bl-modifier -int 0
+#defaults write com.apple.dock wvous-bl-corner -int 7
+#defaults write com.apple.dock wvous-bl-modifier -int 0
 # Bottom right screen corner → Desktop
-defaults write com.apple.dock wvous-br-corner -int 4
-defaults write com.apple.dock wvous-br-modifier -int 0
+#defaults write com.apple.dock wvous-br-corner -int 4
+#defaults write com.apple.dock wvous-br-modifier -int 0
 
 ###############################################################################
 # Safari & WebKit                                                             #
@@ -597,13 +594,13 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 ###############################################################################
 
 # Enable the debug menu in Address Book
-defaults write com.apple.addressbook ABShowDebugMenu -bool true
+#defaults write com.apple.addressbook ABShowDebugMenu -bool true
 
 # Enable Dashboard dev mode (allows keeping widgets on the desktop)
-defaults write com.apple.dashboard devmode -bool true
+#defaults write com.apple.dashboard devmode -bool true
 
 # Enable the debug menu in iCal (pre-10.8)
-defaults write com.apple.iCal IncludeDebugMenu -bool true
+#defaults write com.apple.iCal IncludeDebugMenu -bool true
 
 # Use plain text mode for new TextEdit documents
 defaults write com.apple.TextEdit RichText -int 0
@@ -636,7 +633,7 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool false
 
 # Disable continuous spell checking
-defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool false
+#defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool false
 
 ###############################################################################
 # Google Chrome & Google Chrome Canary                                        #
@@ -680,7 +677,7 @@ defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Do
 defaults write org.m0k.transmission DownloadAsk -bool false
 
 # Trash original torrent files
-defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
+#defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
 
 # Hide the donate message
 defaults write org.m0k.transmission WarningDonate -bool false
