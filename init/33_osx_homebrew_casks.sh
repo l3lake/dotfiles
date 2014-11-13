@@ -42,9 +42,10 @@ casks=(
   little-snitch
   alfred
   capsee
-  slate
+  #slate
   vimr
-  totalfinder
+  xtrafinder
+  logitech-control-center
   startninja
   # day-o
   bartender
