@@ -5,15 +5,16 @@ config defaultToCurrentScreen true
 config nudgePercentOf screenSize
 config resizePercentOf screenSize
 
-# Resize Bindings
-#bind right:alt       resize +10% +0
-#bind left:alt        resize -10% +0
-#bind up:alt          resize +0   -10%
-#bind down:alt        resize +0   +10%
-#bind right:ctrl;alt  resize -10% +0 bottom-right
-#bind left:ctrl;alt   resize +10% +0 bottom-right
-#bind up:ctrl;alt     resize +0   +10% bottom-right
-#bind down:ctrl;alt   resize +0   -10% bottom-right
+# From http://thume.ca/howto/2012/11/19/using-slate/
+# Don't show app icons and show background apps, spreads icons in the same place.
+config windowHintsIgnoreHiddenWindows false
+config windowHintsSpread true
+
+# Window hints
+bind e:cmd hint ASDFGHJKLQWERTYUIOPCVBN
+
+# Window grids
+bind g:cmd grid padding:5 0:6,6 1:6,6
 
 # Push Bindings
 bind right:ctrl;alt  push right bar-resize:screenSizeX/2
