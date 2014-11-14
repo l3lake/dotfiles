@@ -1,4 +1,6 @@
-#!/usr/bin/env bash
+# OSX-only stuff. Abort if not OSX.
+is_osx || return 1
+# # Not sure if I need this # !/usr/bin/env bash
 
 # ~/.osx — https://mths.be/osx
 
