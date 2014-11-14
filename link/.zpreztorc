@@ -49,6 +49,39 @@ zstyle ':prezto:module:editor' key-bindings 'vi'
 zstyle ':prezto:module:editor' dot-expansion 'yes'
 
 # |------------------------------------------------------------------------------
+# | Navigating and Listing Aliases
+# |------------------------------------------------------------------------------
+alias ll="ls -lhA"
+#alias ls="ls -CF"
+alias sl="ls"
+alias lsl="ls -lhFA | less"
+alias l="ls -lFh"
+alias lS="ls -1FSsh"
+alias la="ls -lAFh"
+alias lart="ls -1Fcart"
+alias ldot="ls -ld .*"
+#alias ll="ls -l"
+alias lr="ls -tRFh"
+alias lrt="ls -1Fcrt"
+alias ls="ls --color=tty"
+alias lsa="ls -lah"
+alias lsl="ls -lhFA | less"
+alias lt="ls -ltFh"
+alias fhere="find . -name "
+
+# |------------------------------------------------------------------------------
+# | System Aliases
+# |------------------------------------------------------------------------------
+alias s="sudo"
+alias sag="sudo apt-get"
+alias ag="apt-get"
+alias c="clear"
+alias df="df -Tha -total"
+alias du="du -ach | sort -h"
+alias free="free -mt"
+alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
+
+# |------------------------------------------------------------------------------
 # | Docker Aliases
 # |------------------------------------------------------------------------------
 # dip = Getting the IP address
@@ -65,6 +98,26 @@ alias dim="docker images"
 alias din="docker inspect"
 alias vha="vim ~/haproxy-config/haproxy.cfg"
 alias dln="docker ps --no-trunc | awk '{print $NF}'"
+
+# Get the id of last run container example:
+#
+#   $ docker run ubuntu echo hello world
+#     hello world
+#   $ dl
+#     19824759274
+#   $ sudo docker commit `dl` helloworld
+#     fdo892cf4fh
+#
+alias dl="docker ps -l -q"
+
+# |------------------------------------------------------------------------------
+# | Functions
+# |------------------------------------------------------------------------------
+# Create directory and move into it
+mcd () {
+    mkdir -p $1
+    cd $1
+}
 
 #
 # Git
