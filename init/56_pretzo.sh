@@ -1,5 +1,5 @@
 # OSX-only stuff. Abort if not OSX.
-is_osx || return 1
+#is_osx || return 1
 
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
