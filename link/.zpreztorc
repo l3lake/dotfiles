@@ -48,6 +48,24 @@ zstyle ':prezto:module:editor' key-bindings 'vi'
 # Auto convert .... to ../..
 zstyle ':prezto:module:editor' dot-expansion 'yes'
 
+# |------------------------------------------------------------------------------
+# | Docker Aliases
+# |------------------------------------------------------------------------------
+# dip = Getting the IP address
+alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
+alias drm="docker rm"
+alias drmi="docker rmi"
+alias dps="docker ps"
+alias dpsa="docker ps -a"
+alias d="docker"
+alias ds="docker stop"
+alias dst="docker start"
+alias de="docker-enter"
+alias dim="docker images"
+alias din="docker inspect"
+alias vha="vim ~/haproxy-config/haproxy.cfg"
+alias dln="docker ps --no-trunc | awk '{print $NF}'"
+
 #
 # Git
 #
