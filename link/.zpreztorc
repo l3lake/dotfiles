@@ -32,11 +32,11 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
-  'prompt' \
   'homebrew' \
   'git' \
   'fasd' \
-  'history-substring-search'
+  'history-substring-search' \
+  'prompt'
 
 #
 # Editor
@@ -119,6 +119,28 @@ mcd () {
     cd $1
 }
 
+# Docker
+function dockeruseradd () {
+  sudo groupadd docker
+  sudo gpasswd -a $1 docker
+  sudo docker restart
+  echo ""
+  echo "" Done. $1 added to docker.
+  echo ""
+}
+
+# Vim Setup
+function vimsetup () {
+# Download Vim plugins.
+  if [[ "$(type -P vim)" ]]; then
+    vim +PlugUpgrade +PlugUpdate +qall
+  fi
+}
+
+# Link Config Files
+function linkconfigs () {
+
+}
 # |------------------------------------------------------------------------------
 # | Git Aliases
 # |------------------------------------------------------------------------------
