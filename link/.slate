@@ -7,8 +7,19 @@ config resizePercentOf screenSize
 
 # From http://thume.ca/howto/2012/11/19/using-slate/
 # Don't show app icons and show background apps, spreads icons in the same place.
+config windowHintsDuration 30
+config windowHintsTopLeftX (windowSizeX/3)-(windowHintsWidth/3);1
+config windowHintsShowIcons true
+config windowHintsIconAlpha .6
+config windowHintsFontColor 255;125;125;1.0
+config windowHintsBackgroundColor 50;53;58;0.6
+config windowHintsWidth 50
+config windowHintsHeight 50
+config windowHintsRoundedCornerSize 0
 config windowHintsIgnoreHiddenWindows false
 config windowHintsSpread true
+
+config switchIconPadding 50
 
 # Window hints
 bind e:cmd hint ASDFGHJKLQWERTYUIOPCVBN
