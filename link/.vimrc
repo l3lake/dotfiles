@@ -99,6 +99,12 @@ nmap <silent> ,so :so %<CR>
 " My Additions
 "
 "-------------------------------------------------------------------
+" Toggle paste mode
+nmap <silent> <leader>p :set invpaste<CR>:set paste?<CR>
+imap <silent> <leader>pp :set invpaste<CR>:set paste?<CR>
+
+" format the entire file
+nnoremap <leader>fef :normal! gg=G``<CR
 
 " Quickly toggle line numbers
 :nmap <C-N><C-N> :set invnumber<CR>
