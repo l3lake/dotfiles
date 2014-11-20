@@ -19,6 +19,7 @@ recipes=(
   tree
   wget
   curl
+  vagrant
   # vim
   brew-cask
 )
