@@ -47,6 +47,7 @@ casks=(
   xtrafinder
   logitech-control-center
   startninja
+  menumeters
   # day-o
   bartender
   vagrant-manager
