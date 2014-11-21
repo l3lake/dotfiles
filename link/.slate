@@ -1,24 +1,23 @@
-# This is the default .slate file.
-# If no ~/.slate file exists this is the file that will be used.
-
 config defaultToCurrentScreen true
 config nudgePercentOf screenSize
 config resizePercentOf screenSize
 
+#
+# My Configs
+#
+
 # From http://thume.ca/howto/2012/11/19/using-slate/
-# Don't show app icons and show background apps, spreads icons in the same place.
 config windowHintsDuration 30
-config windowHintsTopLeftX (windowSizeX/3)-(windowHintsWidth/3);1
 config windowHintsShowIcons true
-config windowHintsIconAlpha .6
-config windowHintsFontColor 255;125;125;1.0
-config windowHintsBackgroundColor 50;53;58;0.6
-config windowHintsWidth 50
-config windowHintsHeight 50
-config windowHintsRoundedCornerSize 0
+config windowHintsIconAlpha .4
+config windowHintsFontColor 240;240;240;1.0
+config windowHintsFontSize 50
+config windowHintsBackgroundColor 50;53;58;1
+config windowHintsWidth 90
+config windowHintsHeight 90
+config windowHintsRoundedCornerSize 6
 config windowHintsIgnoreHiddenWindows false
 config windowHintsSpread true
-
 config switchIconPadding 50
 
 # Window hints
@@ -28,10 +27,34 @@ bind e:cmd hint ASDFGHJKLQWERTYUIOPCVBN
 bind g:cmd grid padding:5 0:6,6 1:6,6
 
 # Push Bindings
-bind right:ctrl;alt  push right bar-resize:screenSizeX/2
-bind left:ctrl;alt   push left  bar-resize:screenSizeX/2
-bind up:ctrl;alt     push up    bar-resize:screenSizeY/2
-bind down:ctrl;alt   push down  bar-resize:screenSizeY/2
+bind l:ctrl;alt      push right bar-resize:screenSizeX/2      # Right Half  = ctrl+alt+l
+bind h:ctrl;alt      push left  bar-resize:screenSizeX/2      # Left  Half  = ctrl+alt+h
+bind right:ctrl;alt  push right bar-resize:screenSizeX/2      # Right Half  = ctrl+alt+right
+bind left:ctrl;alt   push left  bar-resize:screenSizeX/2      # Left  Half  = ctrl+alt+left
+bind k:ctrl;alt      push right bar-resize:screenSizeX*0.6    # Right 60%   = ctrl+alt+k
+bind j:ctrl;alt      push left  bar-resize:screenSizeX*0.6    # Left  60%   = ctrl+alt+j
+
+# Focus
+bind 1:cmd        focus 'Google Chrome'   # Focus Google Chrome = cmd+1
+bind 2:cmd        focus 'iTerm'           # Focus iTerm         = cmd+2
+bind 3:cmd        focus 'Atom'            # Focus Atom          = cmd+3
+bind 0:cmd        focus right             # Focus right         = cmd+0
+bind 9:cmd        focus left              # Focus left          = cmd+9
+bind right:cmd    focus right             # Focus right         = cmd+right
+bind left:cmd     focus left              # Focus left          = cmd+left
+
+# Throw Bindings
+bind ,:ctrl;alt   throw 0 resize
+
+# Relaunch
+bind f12:ctrl;cmd;alt relaunch
+
+# Undo
+bind /:ctrl;cmd;alt undo
+
+#
+# Defaults
+#
 
 # Nudge Bindings
 #bind right:shift;alt nudge +10% +0
@@ -40,13 +63,13 @@ bind down:ctrl;alt   push down  bar-resize:screenSizeY/2
 #bind down:shift;alt  nudge +0   +10%
 
 # Throw Bindings
-bind 1:ctrl;alt         throw 0 resize
-bind 2:ctrl;alt         throw 1 resize
-bind 3:ctrl;alt         throw 2 resize
-bind right:ctrl;alt;cmd throw right resize
-bind left:ctrl;alt;cmd  throw left  resize
-bind up:ctrl;alt;cmd    throw up    resize
-bind down:ctrl;alt;cmd  throw down  resize
+#bind 1:ctrl;alt         throw 0 resize
+#bind 2:ctrl;alt         throw 1 resize
+#bind 3:ctrl;alt         throw 2 resize
+#bind right:ctrl;alt;cmd throw right resize
+#bind left:ctrl;alt;cmd  throw left  resize
+#bind up:ctrl;alt;cmd    throw up    resize
+#bind down:ctrl;alt;cmd  throw down  resize
 
 # Focus Bindings
 #bind right:cmd    focus right
@@ -55,6 +78,3 @@ bind down:ctrl;alt;cmd  throw down  resize
 #bind down:cmd     focus down
 #bind up:cmd;alt   focus behind
 #bind down:cmd;alt focus behind
-
-# Window Hints
-bind esc:cmd hint
