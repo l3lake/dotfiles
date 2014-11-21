@@ -22,7 +22,6 @@ recipes=(
   vagrant
   PHP56
   homebrew/php/composer
-  # vim
   brew-cask
 )
 
