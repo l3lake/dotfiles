@@ -51,6 +51,7 @@ casks=(
   itsycal
   bartender
   vagrant-manager
+  appcleaner
 
   # Quick Look plugins
   betterzipql
