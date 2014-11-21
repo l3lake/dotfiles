@@ -156,6 +156,31 @@ alias whereami=display_info
 alias which-command=whence
 
 # |------------------------------------------------------------------------------
+# | Homebrew & Cask
+# |------------------------------------------------------------------------------
+alias hb = "brew"
+alias hbi = "brew install"
+alias hbin = "brew info"
+alias hbu = "brew uninstall"
+alias hbl = "brew list"
+alias hbup = "brew update"
+alias hbug = "brew upgrade"
+alias hbv = "brew versions"
+alias hbd = "brew doctor"
+alias hbc = "brew cleanup"
+alias hbrb = "brew uninstall ruby-build && brew install --HEAD ruby-build"
+alias hbc = "brew cask"
+alias hbci = "brew cask install"
+alias hbcin = "brew cask info"
+alias hbcu = "brew cask uninstall"
+alias hbcl = "brew cask list"
+alias hbcup = "brew cask update"
+alias hbcug = "brew cask upgrade"
+alias hbcv = "brew cask versions"
+alias hbcd = "brew cask doctor"
+alias hbcc = "brew cask cleanup"
+
+# |------------------------------------------------------------------------------
 # | Git
 # |------------------------------------------------------------------------------
 alias g="git"
@@ -227,6 +252,80 @@ alias gup="git pull --rebase"
 alias gvt="git verify-tag"
 alias gwc="git whatchanged -p --abbrev-commit --pretty=medium"
 alias gwip='git add -A; git ls-files --deleted -z | xargs -r0 git rm; git commit -m "--wip--"'
+
+# From https://github.com/bkuhlmann/dotfiles
+#alias gi = "git init"
+#alias gcle = "git config --local --edit"
+#alias gcge = "git config --global --edit"
+#alias gget = "git config"
+#alias gst = "git status --short --branch"
+#alias gl = 'git log --graph --pretty=format:"%C(yellow)%H%C(reset) %C(bold blue)%an%C(reset) %s%C(bold cyan)%d%C(reset) %C(green)(%cr)%C(reset)"'
+#alias gld = 'git log --pretty=format:"%C(yellow)%H%C(reset) %C(bold blue)%an%C(reset) %s%C(bold cyan)%d%C(reset) %C(green)(%cr)%C(reset) %n%b" --stat'
+#alias glh = 'git log --pretty=format:%H -1 | _copy_and_print'
+#alias gln = "git log --name-status"
+#alias glf = 'git fetch && git log ..@{upstream} --graph --pretty=format:"%C(yellow)%H%C(reset) %C(bold blue)%an%C(reset) %s%C(bold cyan)%d%C(reset) %C(green)(%cr)%C(reset)"'
+#alias gls = 'git log --pretty=format:"%C(yellow)%H%C(reset) %C(bold blue)%an%C(reset) %s%C(bold cyan)%d%C(reset) %C(green)(%cr)%C(reset)" -S'
+#alias glt = 'git log --tags --simplify-by-decoration --pretty = "format:%d (%ad)" --date=short | sed -e "s/ (tag: //" -e "s/)//" -e "/^ /d"'
+#alias grl = "git reflog"
+#alias gg = "git grep"
+#alias glast = "git show --stat"
+#alias guthors = "git log --format = '%an' | sort | uniq -c | sort --reverse"
+#alias gd = "git diff"
+#alias gdc = "git diff --cached"
+#alias gdm = "git diff origin/master"
+#alias gdw = "git diff --word-diff"
+#alias gdt = "git difftool"
+#alias gdtc = "git difftool --cached"
+#alias gdtm = "git difftool origin/master"
+#alias gwc = "git whatchanged -p --pretty=medium"
+#alias glame = "git blame"
+#alias gb = "git branch --verbose"
+#alias gba = "git branch --all"
+#alias gbn = "git rev-parse --abbrev-ref HEAD | _copy_and_print"
+#alias gbr = "git branch --move"
+#alias gm = "git merge"
+#alias gms = "git merge --squash"
+#alias gcl = "git clone"
+#alias gch = "git checkout"
+#alias gchm = "git checkout master"
+#alias ga = "git add"
+#alias gau = "git add --update"
+#alias gap = "git add --patch"
+#alias gall = "git add --all ."
+#alias gco = "git commit"
+#alias gca = "git commit --all"
+#alias gcm = "git commit --message"
+#alias gcam = "git commit --all --message"
+#alias gamend = "git commit --amend"
+#alias gamendh = "git commit --all --amend --reuse-message HEAD"
+#alias gcf = "git commit --fixup"
+#alias gcp = "git cherry-pick"
+#alias gash = "git stash save"
+#alias gashc = "git stash clear"
+#alias gf = "git fetch"
+#alias gfp = "git fetch --prune"
+#alias gpu = "git pull"
+#alias gpur = "git pull --rebase" # Rebase the current branch on top of the upstream branch.
+#alias gpuro = "gpur origin" # Rebase the current branch on top of the upstream origin branch.
+#alias gpurom = "gpuro master" # Rebase the current branch on top of the upstream origin master branch.
+#alias grc = "git rebase --continue"
+#alias gra = "git rebase --abort"
+#alias geady = "git rebase -i @{upstream}" # Interactive rebase.
+#alias gp = "git push"
+#alias gpo = "git push --set-upstream origin"
+#alias gpr = "git push review master"
+#alias gps = "git push stage stage:master"
+#alias gpp = "git push production production:master"
+#alias gtag = "git tag"
+#alias gtags = "git push --tags"
+#alias gr = "git reset" # Unstage staged files for commit.
+#alias grs = "git reset --soft HEAD^" # Uncommit previous commit.
+#alias grh = "git reset --hard HEAD" # Reset to HEAD, destroying all staged/unstaged changes.
+#alias gdis = "git reset --hard" # Reset to commit (hash), destroying all committed changes up to specific commit.
+#alias grev = "git revert" # Revert a previous commit (hash).
+#alias glatest = "git for-each-ref --sort=-committerdate refs/heads --format = '%(committerdate:short) %(refname:short)'"
+#alias ggc = "git fsck && git gc"
+#alias grp = "git remote prune origin"alias #
 
 # |------------------------------------------------------------------------------
 # | Functions
