@@ -30,14 +30,16 @@ zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
   'editor' \
-  'git' \
   'history' \
+  'history-substring-search' \
   'directory' \
   'spectrum' \
   'utility' \
   'completion' \
   'homebrew' \
-  'syntax-highlighting' \
+  'osx' \
+  'git' \
+  'fasd' \
   'prompt'
 
 #
@@ -45,17 +47,81 @@ zstyle ':prezto:load' pmodule \
 #
 
 # Set the key mapping style to 'emacs' or 'vi'.
-zstyle ':prezto:module:editor' key-bindings 'emacs'
+zstyle ':prezto:module:editor' key-bindings 'vi'
 
 # Auto convert .... to ../..
-# zstyle ':prezto:module:editor' dot-expansion 'yes'
+zstyle ':prezto:module:editor' dot-expansion 'yes'
 
-#
-# Git
-#
+# |------------------------------------------------------------------------------
+# | Navigating and Listing Aliases
+# |------------------------------------------------------------------------------
+alias ll="ls -lhA"
+#alias ls="ls -CF"
+alias sl="ls"
+alias lsl="ls -lhFA | less"
+alias l="ls -lFh"
+alias lS="ls -1FSsh"
+alias la="ls -lAFh"
+alias lart="ls -1Fcart"
+alias ldot="ls -ld .*"
+#alias ll="ls -l"
+alias lr="ls -tRFh"
+alias lrt="ls -1Fcrt"
+alias ls="ls --color=tty"
+alias lsa="ls -lah"
+alias lsl="ls -lhFA | less"
+alias lt="ls -ltFh"
+alias fhere="find . -name "
 
-# Ignore submodules when they are 'dirty', 'untracked', 'all', or 'none'.
-# zstyle ':prezto:module:git:status:ignore' submodules 'all'
+# |------------------------------------------------------------------------------
+# | System Aliases
+# |------------------------------------------------------------------------------
+alias s="sudo"
+alias sag="sudo apt-get"
+alias ag="apt-get"
+alias c="clear"
+alias df="df -Tha -total"
+alias du="du -ach | sort -h"
+alias free="free -mt"
+alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
+
+# |------------------------------------------------------------------------------
+# | Docker Aliases
+# |------------------------------------------------------------------------------
+# dip = Getting the IP address
+alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
+alias drm="docker rm"
+alias drmi="docker rmi"
+alias dps="docker ps"
+alias dpsa="docker ps -a"
+alias d="docker"
+alias ds="docker stop"
+alias dst="docker start"
+alias de="docker-enter"
+alias dim="docker images"
+alias din="docker inspect"
+alias vha="vim ~/haproxy-config/haproxy.cfg"
+alias dln="docker ps --no-trunc | awk '{print $NF}'"
+
+# Get the id of last run container example:
+#
+#   $ docker run ubuntu echo hello world
+#     hello world
+#   $ dl
+#     19824759274
+#   $ sudo docker commit `dl` helloworld
+#     fdo892cf4fh
+#
+alias dl="docker ps -l -q"
+
+# |------------------------------------------------------------------------------
+# | Functions
+# |------------------------------------------------------------------------------
+# Create directory and move into it
+mcd () {
+    mkdir -p $1
+    cd $1
+}
 
 #
 # GNU Utility
@@ -91,7 +157,7 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-zstyle ':prezto:module:prompt' theme 'sorin'
+zstyle ':prezto:module:prompt' theme 'blake'
 
 #
 # Ruby
