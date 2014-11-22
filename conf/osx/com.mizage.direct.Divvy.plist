@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SULastCheckTime</key>
+	<date>2014-11-13T07:22:42Z</date>
+	<key>SUSkippedVersion</key>
+	<string>558</string>
+	<key>WebKitDefaultFontSize</key>
+	<integer>11</integer>
+	<key>WebKitStandardFont</key>
+	<string>.Helvetica Neue DeskInterface</string>
+	<key>enableAcceleration</key>
+	<true/>
+	<key>globalHotkey</key>
+	<dict>
+		<key>keyCode</key>
+		<integer>2</integer>
+		<key>modifiers</key>
+		<integer>256</integer>
+	</dict>
+	<key>kXMRegCode</key>
+	<string>GAWAE-FCQJ5-K3J9H-UZ5AX-MBJHA-7YTQ3-NFSZZ-HWLYC-CQ7XX-MREZ5-HNSAV-9HX5M-2KBR2-BHBFV-T834</string>
+	<key>kXMRegName</key>
+	<string>l3lake</string>
+	<key>shortcuts</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUIZGVUJHRvcFgkb2JqZWN0c1gkdmVyc2lvblkkYXJjaGl2ZXLR
+	BgdUcm9vdIABrxAQCQoVLC00PD1FRk5PVldfYFUkbnVsbNILDA0OViRjbGFzc1pOUy5v
+	YmplY3RzgA+mDxAREhMUgAKABYAHgAmAC4AN3RYXGBkaGxwdHh8gIQsiIyMkJSMmJygn
+	KiYrXxASc2VsZWN0aW9uRW5kQ29sdW1uXxARc2VsZWN0aW9uU3RhcnRSb3dca2V5Q29t
+	Ym9Db2RlV2VuYWJsZWRda2V5Q29tYm9GbGFnc18QFHNlbGVjdGlvblN0YXJ0Q29sdW1u
+	W3NpemVDb2x1bW5zWnN1YmRpdmlkZWRXbmFtZUtleVZnbG9iYWxfEA9zZWxlY3Rpb25F
+	bmRSb3dYc2l6ZVJvd3MQAhAACRIAEAAAEAYIgAMIEAWABFRsZWZ00i4vMDNYJGNsYXNz
+	ZXNaJGNsYXNzbmFtZaIxMlhTaG9ydGN1dFhOU09iamVjdFhTaG9ydGN1dN0WFxgZGhsc
+	HR4fICELKiM1JDc1Jic5JyomKxADCRIAEAAACIAGCIAEVXJpZ2h03RYXGBkaGxwdHh8g
+	IQsiIz4kQCMmJ0InIiYrEAwJEgAQAAAIgAgIgARYdG9wIGxlZnTdFhcYGRobHB0eHyAh
+	CyojRyRJNSYnSyciJisQDwkSABAAAAiACgiABFl0b3AgcmlnaHTdFhcYGRobHB0eHyAh
+	CyI1JiRRIyYnUycqJisJEgAQAAAIgAwIgARbYm90dG9tIGxlZnTdFhcYGRobHB0eHyAh
+	Cyo1WCRaNSYnXCcqJisQCAkSABAAAAiADgiABFxib3R0b20gcmlnaHTSLi9hYqNiYzJe
+	TlNNdXRhYmxlQXJyYXlXTlNBcnJheRIAAYagXxAPTlNLZXllZEFyY2hpdmVyAAgAEQAW
+	AB8AKAAyADUAOgA8AE8AVQBaAGEAbABuAHUAdwB5AHsAfQB/AIEAnACxAMUA0gDaAOgA
+	/wELARYBHgElATcBQAFCAUQBRQFKAUwBTQFPAVABUgFUAVkBXgFnAXIBdQF+AYcBkAGr
+	Aa0BrgGzAbQBtgG3AbkBvwHaAdwB3QHiAeMB5QHmAegB8QIMAg4CDwIUAhUCFwIYAhoC
+	JAI/AkACRQJGAkgCSQJLAlcCcgJ0AnUCegJ7An0CfgKAAo0CkgKWAqUCrQKyAAAAAAAA
+	AgEAAAAAAAAAZgAAAAAAAAAAAAAAAAAAAsQ=
+	</data>
+	<key>showMenuIcon</key>
+	<false/>
+	<key>useGlobalHotkey</key>
+	<true/>
+</dict>
+</plist>
