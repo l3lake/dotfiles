@@ -253,10 +253,10 @@
 #sout-x264-stats=x264_2pass.log
 
 # Default preset setting used (string)
-#sout-x264-preset=
+sout-x264-preset=ultrafast
 
 # Default tune setting used (string)
-#sout-x264-tune=
+sout-x264-tune=film
 
 # x264 advanced options. (string)
 #sout-x264-options=
@@ -868,7 +868,7 @@
 #crossfeed=0.300000
 
 # Dry mix (float)
-#dry-mix=0.800000
+dry-mix=0.400000
 
 [spudec] # DVD subtitles decoder
 
@@ -976,7 +976,7 @@
 [schroedinger] # Dirac video decoder using libschroedinger
 
 # Rate control method (string)
-#sout-schro-rate-control=
+sout-schro-rate-control=constant_noise_threshold
 
 # Constant quality factor (float)
 #sout-schro-quality=-1.000000
@@ -994,7 +994,7 @@
 #sout-schro-min-bitrate=-1
 
 # GOP structure (string)
-#sout-schro-gop-structure=
+sout-schro-gop-structure=adaptive
 
 # GOP length (integer)
 #sout-schro-gop-length=-1
@@ -1006,13 +1006,13 @@
 #sout-schro-coding-mode=auto
 
 # Motion Vector precision (string)
-#sout-schro-mv-precision=
+sout-schro-mv-precision=1
 
 # Size of motion compensation blocks (string)
-#sout-schro-motion-block-size=
+sout-schro-motion-block-size=automatic
 
 # Overlap of motion compensation blocks (string)
-#sout-schro-motion-block-overlap=
+sout-schro-motion-block-overlap=automatic
 
 # Three component motion estimation (integer)
 #sout-schro-me-combined=-1
@@ -1030,10 +1030,10 @@
 #sout-schro-enable-phasecorr-me=-1
 
 # Intra picture DWT filter (string)
-#sout-schro-intra-wavelet=
+sout-schro-intra-wavelet=desl_dubuc_9_7
 
 # Inter picture DWT filter (string)
-#sout-schro-inter-wavelet=
+sout-schro-inter-wavelet=desl_dubuc_9_7
 
 # Number of DWT iterations (integer)
 #sout-schro-transform-depth=-1
@@ -1042,10 +1042,10 @@
 #sout-schro-enable-multiquant=-1
 
 # Size of code blocks in each subband (string)
-#sout-schro-codeblock-size=
+sout-schro-codeblock-size=automatic
 
 # Prefilter (string)
-#sout-schro-filtering=
+sout-schro-filtering=none
 
 # Amount of prefiltering (float)
 #sout-schro-filter-value=-1.000000
@@ -1054,7 +1054,7 @@
 #sout-schro-enable-scd=-1
 
 # perceptual weighting method (string)
-#sout-schro-perceptual-weighting=
+sout-schro-perceptual-weighting=none
 
 # perceptual distance (float)
 #sout-schro-perceptual-distance=-1.000000
@@ -1069,7 +1069,7 @@
 #sout-schro-vert-slices=-1
 
 # Force Profile (string)
-#sout-schro-force-profile=
+sout-schro-force-profile=auto
 
 [scene] # Scene video filter
 
@@ -1157,7 +1157,7 @@
 #rss-y=0
 
 # Text position (integer)
-#rss-position=-1
+rss-position=0
 
 # Opacity (integer)
 #rss-opacity=255
@@ -1203,7 +1203,7 @@
 #rmtosd-password=
 
 # VNC poll interval (integer)
-#rmtosd-update=1000
+rmtosd-update=300
 
 # VNC polling (boolean)
 #rmtosd-vnc-polling=0
@@ -1357,7 +1357,7 @@
 [podcast] # Podcasts
 
 # Podcast URLs list (string)
-#podcast-urls=
+podcast-urls=http://media.kcrw.com/podcast/show/mb|http://media.kcrw.com/podcast/show/tu|http://www.npr.org/rss/podcast.php?id=510298|http://www.npr.org/rss/podcast.php?id=510208|http://www.npr.org/rss/podcast.php?id=510299|http://www.npr.org/rss/podcast.php?id=510294
 
 [playlist] # Playlist
 
@@ -1621,7 +1621,7 @@
 #sout-mono-downmix=1
 
 # Select channel to keep (integer)
-#sout-mono-channel=-1
+sout-mono-channel=0
 
 [mod] # MOD demuxer (libmodplug)
 
@@ -1700,7 +1700,7 @@
 #marq-y=0
 
 # Marquee position (integer)
-#marq-position=-1
+marq-position=0
 
 # Opacity (integer)
 #marq-opacity=255
@@ -1729,7 +1729,7 @@ macosx-nativefullscreenmode=0
 #macosx-icon-change=1
 
 # Show Previous & Next Buttons (boolean)
-#macosx-show-playback-buttons=0
+macosx-show-playback-buttons=1
 
 # Show Shuffle & Repeat Buttons (boolean)
 #macosx-show-playmode-buttons=0
@@ -1741,7 +1741,7 @@ macosx-nativefullscreenmode=0
 #macosx-show-sidebar=1
 
 # Maximum Volume displayed (integer)
-#macosx-max-volume=125
+macosx-max-volume=100
 
 # Auto-playback of new items (boolean)
 #macosx-autoplay=1
@@ -1753,7 +1753,7 @@ macosx-nativefullscreenmode=0
 #macosx-fspanel=1
 
 # Resize interface to the native video size (boolean)
-#macosx-video-autoresize=1
+macosx-video-autoresize=0
 
 # Pause the video playback when minimized (boolean)
 #macosx-pause-minimized=0
@@ -1838,7 +1838,7 @@ macosx-black=1
 #logo-opacity=255
 
 # Logo position (integer)
-#logo-position=-1
+logo-position=0
 
 [logger] # File logging
 
@@ -2527,7 +2527,7 @@ macosx-black=1
 [auhal] # HAL AudioUnit output
 
 # Audio volume (integer)
-#auhal-volume=256
+auhal-volume=243
 
 # Last audio device (string)
 #auhal-audio-device=
@@ -2558,7 +2558,7 @@ macosx-black=1
 #audiobargraph_v-transparency=255
 
 # Bargraph position (integer)
-#audiobargraph_v-position=-1
+audiobargraph_v-position=0
 
 # Alarm (integer)
 #audiobargraph_v-alarm=0
@@ -3437,13 +3437,13 @@ key-leave-fullscreen=
 #global-key-faster=
 
 # Faster (string)
-#key-faster=Command+=
+key-faster=
 
 # Slower (string)
 #global-key-slower=
 
 # Slower (string)
-#key-slower=Command+-
+key-slower=
 
 # Normal rate (string)
 #global-key-rate-normal=
@@ -3455,25 +3455,25 @@ key-leave-fullscreen=
 #global-key-rate-faster-fine=
 
 # Faster (fine) (string)
-#key-rate-faster-fine=
+key-rate-faster-fine=Command-Right
 
 # Slower (fine) (string)
 #global-key-rate-slower-fine=
 
 # Slower (fine) (string)
-#key-rate-slower-fine=
+key-rate-slower-fine=Command-Left
 
 # Next (string)
 #global-key-next=
 
 # Next (string)
-key-next=r
+key-next=e
 
 # Previous (string)
 #global-key-prev=
 
 # Previous (string)
-key-prev=e
+key-prev=w
 
 # Stop (string)
 #global-key-stop=
@@ -3491,7 +3491,7 @@ key-position=
 #global-key-jump-extrashort=
 
 # Very short backwards jump (string)
-#key-jump-extrashort=Command+Ctrl+Left
+key-jump-extrashort=
 
 # Very short forward jump (string)
 #global-key-jump+extrashort=
@@ -3503,7 +3503,7 @@ key-jump+extrashort=
 #global-key-jump-short=
 
 # Short backwards jump (string)
-key-jump-short=
+key-jump-short=s
 
 # Short forward jump (string)
 #global-key-jump+short=
@@ -3515,7 +3515,7 @@ key-jump+short=d
 #global-key-jump-medium=
 
 # Medium backwards jump (string)
-key-jump-medium=s
+key-jump-medium=a
 
 # Medium forward jump (string)
 #global-key-jump+medium=
@@ -3527,7 +3527,7 @@ key-jump+medium=f
 #global-key-jump-long=
 
 # Long backwards jump (string)
-key-jump-long=a
+key-jump-long=q
 
 # Long forward jump (string)
 #global-key-jump+long=
@@ -3575,31 +3575,31 @@ key-frame-next=
 #global-key-disc-menu=
 
 # Go to the DVD menu (string)
-#key-disc-menu=Ctrl+m
+key-disc-menu=
 
 # Select previous DVD title (string)
 #global-key-title-prev=
 
 # Select previous DVD title (string)
-#key-title-prev=Ctrl+p
+key-title-prev=
 
 # Select next DVD title (string)
 #global-key-title-next=
 
 # Select next DVD title (string)
-#key-title-next=Ctrl+n
+key-title-next=
 
 # Select prev DVD chapter (string)
 #global-key-chapter-prev=
 
 # Select prev DVD chapter (string)
-#key-chapter-prev=Ctrl+u
+key-chapter-prev=
 
 # Select next DVD chapter (string)
 #global-key-chapter-next=
 
 # Select next DVD chapter (string)
-#key-chapter-next=Ctrl+d
+key-chapter-next=
 
 # Quit (string)
 #global-key-quit=
@@ -3623,7 +3623,7 @@ key-frame-next=
 #global-key-vol-mute=
 
 # Mute (string)
-#key-vol-mute=Command+Alt+Down
+key-vol-mute=m
 
 # Subtitle delay up (string)
 #global-key-subdelay-up=
@@ -3719,31 +3719,31 @@ key-subtitle-track=
 #global-key-aspect-ratio=
 
 # Cycle source aspect ratio (string)
-key-aspect-ratio=t
+key-aspect-ratio=r
 
 # Cycle video crop (string)
 #global-key-crop=
 
 # Cycle video crop (string)
-#key-crop=c
+key-crop=
 
 # Toggle autoscaling (string)
 #global-key-toggle-autoscale=
 
 # Toggle autoscaling (string)
-#key-toggle-autoscale=o
+key-toggle-autoscale=
 
 # Increase scale factor (string)
 #global-key-incr-scalefactor=
 
 # Increase scale factor (string)
-#key-incr-scalefactor=Alt+o
+key-incr-scalefactor=
 
 # Decrease scale factor (string)
 #global-key-decr-scalefactor=
 
 # Decrease scale factor (string)
-#key-decr-scalefactor=Shift+Alt+o
+key-decr-scalefactor=
 
 # Toggle deinterlacing (string)
 #global-key-deinterlace=
@@ -3755,7 +3755,7 @@ key-deinterlace=
 #global-key-deinterlace-mode=
 
 # Cycle deinterlace modes (string)
-#key-deinterlace-mode=Shift+d
+key-deinterlace-mode=
 
 # Show controller in fullscreen (string)
 #global-key-intf-show=
