@@ -175,7 +175,7 @@ defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 defaults write NSGlobalDomain KeyRepeat -int 0
 # From http://msol.io/blog/tech/2014/03/10/work-more-efficiently-on-your-mac-for-developers/
 defaults write -g InitialKeyRepeat -int 200
-defaults write -g KeyRepeat -int 22
+defaults write -g KeyRepeat -int 27
 
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
