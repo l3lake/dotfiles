@@ -1,69 +1,19 @@
-#config defaultToCurrentScreen true
-#config nudgePercentOf screenSize
-#config resizePercentOf screenSize
+# |------------------------------------------------------------------
+# | Configs
+# |------------------------------------------------------------------
+# | Config From
+# | http://msol.io/blog/tech/2014/03/10/work-more-efficiently-on-your-mac-for-developers/
+# |
+# | Default Slate configuration file
+# | Be sure to customize! See https://github.com/jigish/slate#configuring-slate
 
-#
-# Config From
-# http://msol.io/blog/tech/2014/03/10/work-more-efficiently-on-your-mac-for-developers/
-#
+config defaultToCurrentScreen true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
 
-
-#
-# Aliases
-#
-
-## Key aliases
-alias hyper ctrl;shift;alt;cmd
-
-## Application aliaseso;
-alias browser   'Google Chrome'
-alias editor    'Atom'
-alias terminal  'iTerm'
-alias finder    'Finder'
-
-## Position aliases
-alias full         move screenOriginX;screenOriginY                screenSizeX;screenSizeY
-alias lefthalf     move screenOriginX;screenOriginY                screenSizeX/2;screenSizeY
-alias righthalf    move screenOriginX+screenSizeX/2;screenOriginY  screenSizeX/2;screenSizeY
-alias topleft      corner top-left                                 resize:screenSizeX/2;screenSizeY/2
-alias topright     corner top-right                                resize:screenSizeX/2;screenSizeY/2
-alias bottomleft   corner bottom-left                              resize:screenSizeX/2;screenSizeY/2
-alias bottomright  corner bottom-right                             resize:screenSizeX/2;screenSizeY/2
-
-
-#
-# Bindings
-#
-
-## Focus Bindings
-# These should be familiar to Vim users
-bind k:${hyper}  focus up
-bind j:${hyper}  focus down
-bind h:${hyper}  focus left
-bind l:${hyper}  focus right
-
-## Location bindings
-# These are laid out to be used with the right hand
-# and to complement the focus bindings
-bind o:${hyper}  throw next
-bind i:${hyper}  ${full}
-bind ;:${hyper}  ${lefthalf}
-bind ':${hyper}  ${righthalf}
-bind y:${hyper}  ${topleft}
-bind u:${hyper}  ${topright}
-bind b:${hyper}  ${bottomleft}
-bind n:${hyper}  ${bottomright}
-
-## App bindings
-# These are laid out on the left hand
-bind space:${hyper}  focus ${editor}
-bind f:${hyper}      focus ${browser}
-bind d:${hyper}      focus ${terminal}
-
-
-#
-# Window Hints
-#
+# |------------------------------------------------------------------
+# | Window Hints
+# |------------------------------------------------------------------
 
 # From http://thume.ca/howto/2012/11/19/using-slate/
 config windowHintsDuration 5
@@ -85,31 +35,136 @@ bind e:cmd hint ASDFGHJKLQWERTYUIOPCVBN
 # Show Window grids
 bind g:cmd grid padding:5 0:6,6 1:6,6
 
-# Push Bindings
-#bind l:ctrl;alt      push right bar-resize:screenSizeX/2
-#bind h:ctrl;alt      push left  bar-resize:screenSizeX/2
-#bind right:ctrl;alt  push right bar-resize:screenSizeX/2
-#bind left:ctrl;alt   push left  bar-resize:screenSizeX/2
-#bind k:ctrl;alt      push right bar-resize:screenSizeX*0.6
-#bind j:ctrl;alt      push left  bar-resize:screenSizeX*0.6
-#bind a:ctrl;alt      push right bar-resize:screenSizeX/2
-#bind f:ctrl;alt      push left  bar-resize:screenSizeX/2
-#bind s:ctrl;alt      push right bar-resize:screenSizeX*0.6
-#bind d:ctrl;alt      push left  bar-resize:screenSizeX*0.6
+# |------------------------------------------------------------------
+# | Aliases
+# |------------------------------------------------------------------
 
-# Focus
-bind 1:cmd        focus ${browser}
-bind 2:cmd        focus ${terminal}
-bind 3:cmd        focus ${editor}
-bind 4:cmd        focus ${finder}
-bind 0:cmd        focus right
-bind 9:cmd        focus left
-bind right:cmd    focus right
-bind left:cmd     focus left
+## Key aliases
+alias hyper ctrl;shift;alt;cmd
 
-# Throw Bindings
-bind ,:ctrl;alt   throw 0 resize
+## Application aliaseso;
+alias browser   'Google Chrome'
+alias editor    'Sublime Text'
+alias terminal  'iTerm'
+alias finder    'Finder'
 
+## Position aliases
+alias full         		move screenOriginX;screenOriginY                screenSizeX;screenSizeY
+alias lefthalf     		move screenOriginX;screenOriginY                screenSizeX/2;screenSizeY
+alias righthalf    		move screenOriginX+screenSizeX/2;screenOriginY  screenSizeX/2;screenSizeY
+alias topleft      		corner top-left                                 resize:screenSizeX/2;screenSizeY/2
+alias topright     		corner top-right                                resize:screenSizeX/2;screenSizeY/2
+alias bottomleft   		corner bottom-left                              resize:screenSizeX/2;screenSizeY/2
+alias bottomright  		corner bottom-right                             resize:screenSizeX/2;screenSizeY/2
+alias lefttwothird    	push left  bar-resize:screenSizeX*0.7
+alias righttwothird   	push right  bar-resize:screenSizeX*0.7
+alias leftonethird  	push left  bar-resize:screenSizeX*0.3
+alias rightonethird 	push right  bar-resize:screenSizeX*0.3
+
+
+# |------------------------------------------------------------------
+# | Bindings
+# |------------------------------------------------------------------
+
+## Focus Bindings
+# These should be familiar to Vim users
+# bind k:${hyper}  focus up
+# bind j:${hyper}  focus down
+# bind h:${hyper}  focus left
+# bind l:${hyper}  focus right
+
+## Location bindings
+# These are laid out to be used with the right hand
+# and to complement the focus bindings
+bind o:${hyper}  throw next
+#  bind i:${hyper}  ${full}
+#  bind ;:${hyper}  ${lefthalf}
+#  bind ':${hyper}  ${righthalf}
+#  bind y:${hyper}  ${topleft}
+#  bind u:${hyper}  ${topright}
+#  bind b:${hyper}  ${bottomleft}
+#  bind n:${hyper}  ${bottomright}
+#  bind h:${hyper}  ${lefttwothird}
+#  bind l:${hyper}  ${righttwothird}
+#  bind j:${hyper}  ${leftonethird}
+#  bind k:${hyper}  ${rightonethird}
+
+# |------------------------------------------------------------------
+# | Modal bindings
+# |------------------------------------------------------------------
+
+# Left Hand
+bind space:d,cmd ${full}					# fullscreen
+bind w:d,cmd ${lefttwothird} 			# left 2/3
+bind s:d,cmd ${lefthalf}				# left 1/2
+bind z:d,cmd ${leftonethird}			# left 1/3
+bind r:d,cmd ${righttwothird}			# right 2/3
+bind f:d,cmd ${righthalf}				# right 1/2
+bind c:d,cmd ${rightonethird}			# right 1/3
+
+# Left Hand - quarters
+bind q:d,cmd ${topleft}					# top left
+bind w:d,cmd ${topright}				# top right
+bind a:d,cmd ${bottomleft}				# bottom left
+bind s:d,cmd ${bottomright}				# bottom right
+#
+# Right Hand
+#
+bind space:k,cmd ${full}				# fullscreen
+bind u:k,cmd ${lefttwothird}			# left 2/3
+bind j:k,cmd ${lefthalf}				# left 1/2
+bind m:k,cmd ${leftonethird}			# left 1/3
+bind o:k,cmd ${righttwothird}			# right 2/3
+bind l:k,cmd ${righthalf}				# right 1/2
+bind .:k,cmd ${rightonethird}			# right 1/3
+#
+# Right Hand - quarters
+#
+bind p:k,cmd ${topleft}					# top left
+bind [:k,cmd ${topright}				# top right
+bind ;:k,cmd ${bottomleft}				# bottom left
+bind ':k,cmd ${bottomright}				# bottom right
+
+# |------------------------------------------------------------------
+# | App bindings
+# |------------------------------------------------------------------
+
+# These are laid out on the left hand
+bind space:${hyper}  focus ${editor}	# space+hyper=focus on sublime text
+bind f:${hyper}      focus ${browser}	# f+hyper=focus on chrome
+bind d:${hyper}      focus ${terminal}	# d+hyper=focus on terminal
+bind v:${hyper}      focus ${finder}	# v+hyper=focus on finder
+
+# |------------------------------------------------------------------
+# | Push Bindings
+# |------------------------------------------------------------------
+# bind l:ctrl;alt      push right bar-resize:screenSizeX/2
+# bind h:ctrl;alt      push left  bar-resize:screenSizeX/2
+# bind right:ctrl;alt  push right bar-resize:screenSizeX/2
+# bind left:ctrl;alt   push left  bar-resize:screenSizeX/2
+# bind a:ctrl;alt      push right bar-resize:screenSizeX/2
+# bind f:ctrl;alt      push left  bar-resize:screenSizeX/2
+# bind s:ctrl;alt      push right bar-resize:screenSizeX*0.6
+# bind d:ctrl;alt      push left  bar-resize:screenSizeX*0.6
+
+# |------------------------------------------------------------------
+# | Focus
+# |------------------------------------------------------------------
+# bind 1:cmd        focus ${browser}
+# bind 2:cmd        focus ${terminal}
+# bind 3:cmd        focus ${editor}
+# bind 4:cmd        focus ${finder}
+# bind 0:cmd        focus right
+# bind 9:cmd        focus left
+
+# |------------------------------------------------------------------
+# | Throw Bindings
+# |------------------------------------------------------------------
+# bind ,:ctrl;alt   throw 0 resize
+
+# |------------------------------------------------------------------
+# | Misc
+# |------------------------------------------------------------------
 # Relaunch
 bind f12:ctrl;cmd;alt relaunch
 
