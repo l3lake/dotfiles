@@ -40,7 +40,7 @@ bind g:cmd grid padding:5 0:6,6 1:6,6
 # |------------------------------------------------------------------
 
 ## Key aliases
-alias hyper ctrl;shift;alt;cmd
+#alias hyper ctrl;shift;alt;cmd
 
 ## Application aliaseso;
 alias browser   'Google Chrome'
@@ -76,7 +76,7 @@ alias rightonethird 	push right  bar-resize:screenSizeX*0.3
 ## Location bindings
 # These are laid out to be used with the right hand
 # and to complement the focus bindings
-bind o:${hyper}  throw next
+#bind o:${hyper}  throw next
 #  bind i:${hyper}  ${full}
 #  bind ;:${hyper}  ${lefthalf}
 #  bind ':${hyper}  ${righthalf}
@@ -92,6 +92,22 @@ bind o:${hyper}  throw next
 # |------------------------------------------------------------------
 # | Modal bindings
 # |------------------------------------------------------------------
+
+# SizeUp bindings
+bind left:ctrl,alt,cmd			# Left
+bind right:ctrl,alt,cmd			# Right
+bind up:ctrl,alt,cmd			# Up
+bind down:ctrl,alt,cmd			# Down
+bind left:ctrl,alt,shift		# Upper Left
+bind up:ctrl,alt,shift			# Upper Right
+bind down:ctrl,alt,shift		# Lower Left
+bind right:ctrl,alt,shift		# Lower Right
+bind m:ctrl,alt,cmd				# Full Screen
+bind c:ctrl,alt,cmd				# Center
+# Prev Monitor
+# Next Monitor
+# Space Prev
+# Space Next
 
 # Left Hand
 bind space:d,cmd ${full}					# fullscreen
@@ -130,10 +146,10 @@ bind ':k,cmd ${bottomright}				# bottom right
 # |------------------------------------------------------------------
 
 # These are laid out on the left hand
-bind space:${hyper}  focus ${editor}	# space+hyper=focus on sublime text
-bind f:${hyper}      focus ${browser}	# f+hyper=focus on chrome
-bind d:${hyper}      focus ${terminal}	# d+hyper=focus on terminal
-bind v:${hyper}      focus ${finder}	# v+hyper=focus on finder
+#bind space:${hyper}  focus ${editor}	# space+hyper=focus on sublime text
+#bind f:${hyper}      focus ${browser}	# f+hyper=focus on chrome
+#bind d:${hyper}      focus ${terminal}	# d+hyper=focus on terminal
+#bind v:${hyper}      focus ${finder}	# v+hyper=focus on finder
 
 # |------------------------------------------------------------------
 # | Push Bindings
